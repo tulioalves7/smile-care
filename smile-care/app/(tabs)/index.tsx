@@ -1,37 +1,47 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity, Platform } from 'react-native';
+import React, { useLayoutEffect } from 'react';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function HomeScreen() {
+  const navigation = useNavigation();
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      title: '', // Define um título vazio
+    });
+  }, [navigation]);
+
   return (
     <View style={styles.container}>
-      {/* Logo no topo */}
-      <View style={styles.logoContainer}>
+      {/* Área superior com logo */}
+      <View style={styles.header}>
         <Image source={require('@/assets/images/smile.png')} style={styles.logo} />
-        {/* <Text style={styles.logoText}>SmileCare</Text> */}
       </View>
 
-      {/* Botões principais */}
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Diagnóstico Bucal</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Cuidados Bucais</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Vídeos Interativos</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Guias práticos</Text>
-        </TouchableOpacity>
-      </View>
+      {/* Conteúdo principal com fundo preto e bordas arredondadas */}
+      <View style={styles.content}>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Diagnóstico Bucal</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Cuidados Bucais</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Vídeos Interativos</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Guias práticos</Text>
+          </TouchableOpacity>
+        </View>
 
-      {/* Ajuda na parte inferior */}
-      <View style={styles.helpContainer}>
-        <Text style={styles.helpText}>Precisando de ajuda?</Text>
-        <TouchableOpacity>
-          <Text style={styles.helpLink}>Clique aqui</Text>
-        </TouchableOpacity>
+        {/* Ajuda na parte inferior */}
+        <View style={styles.helpContainer}>
+          <Text style={styles.helpText}>Precisando de ajuda?</Text>
+          <TouchableOpacity>
+            <Text style={styles.helpLink}>Clique aqui</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -40,29 +50,31 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#2F3737', // Cor de fundo escura
-    padding: 20,
-    justifyContent: 'space-between',
+    backgroundColor: '#F0F0F0', // Fundo claro no topo
   },
-  logoContainer: {
+  header: {
     alignItems: 'center',
-    paddingTop: 50,
+    paddingVertical: 30,
+    marginBottom: 20,
   },
   logo: {
-    width: 80,
-    height: 80,
-    marginBottom: 10,
+    width: 140,  // Aumentando o tamanho da logo
+    height: 140,
+    resizeMode: 'contain',
   },
-  logoText: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#FFFFFF',
+  content: {
+    flex: 1,
+    backgroundColor: '#2F3737', // Fundo escuro
+    borderTopLeftRadius: 140, // Adicionando borda arredondada no topo do fundo preto
+    borderTopRightRadius: 120,
+    paddingTop: 100,
+    justifyContent: 'space-between',
   },
   buttonContainer: {
     alignItems: 'center',
   },
   button: {
-    backgroundColor: '#3FB3B5', // Cor do botão (turquesa)
+    backgroundColor: '#3FB3B5',
     borderRadius: 30,
     paddingVertical: 15,
     paddingHorizontal: 30,
@@ -72,7 +84,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 18,
-    color: '#FFF', // Cor do texto dos botões
+    color: '#FFF',
     fontWeight: '600',
   },
   helpContainer: {
@@ -85,7 +97,7 @@ const styles = StyleSheet.create({
   },
   helpLink: {
     fontSize: 14,
-    color: '#4ECCA3',
+    color: '#28DDE0',
     fontWeight: 'bold',
   },
 });
