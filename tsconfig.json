@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // Fica no topo da evolução JS 🚀
+    "module": "commonjs",
+    "jsx": "react", // React com JSX, claro! 
+    "lib": ["dom", "esnext"], // Para usar as novas funcionalidades do ESNext e Web APIs
+    "allowJs": true, // Permite arquivos JS, caso precise misturar com TS
+    "skipLibCheck": true, // Ignora checagem de libs (pra não ficar empacado por nada)
+    "esModuleInterop": true, // Para facilitar a importação de módulos ES
+    "strict": true, // TypeScript no modo nervoso (pra garantir a tipagem)
+    "forceConsistentCasingInFileNames": true, // Evita problemas com letras maiúsculas/minúsculas
+    "noEmit": true // Não vai gerar arquivos JS (apenas tipagem)
+  },
+  "extends": "expo/tsconfig.base", // Herda as configs padrão do Expo
+  "exclude": ["node_modules"] // Não tenta compilar o que está fora do seu alcance 😂
+}
