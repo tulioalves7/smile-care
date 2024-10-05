@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import styles from './style';
-import { RootStackParamList } from './_layout';
+import { RootStackParamList } from '../_layout';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
@@ -14,7 +14,7 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
         {/* Semi-círculo menor */}
         <View style={styles.smallSemiCircle}>
           {/* Logo dentro do semi-círculo menor */}
-          <Image source={require('../assets/images/smile.jpg')} style={styles.logo} />
+          <Image source={require('../../assets/images/smile.jpg')} style={styles.logo} />
         </View>
       </View>
       <View style={styles.buttonContainer}>

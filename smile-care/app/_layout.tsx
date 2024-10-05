@@ -1,7 +1,7 @@
 import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import * as React from 'react';
-import HomeScreen from './index';
+import HomeScreen from './Home/index';
 import DiagnosticoBucal from './Diagnostico/index';
 import * as SplashScreen from 'expo-splash-screen';
 import CuidadosBucais from './Cuidados';
@@ -26,7 +26,7 @@ export default function RootLayout() {
 
   return (
     <NavigationContainer independent={true}>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Diagnóstico Bucal" component={DiagnosticoBucal} />
         <Stack.Screen name="Cuidados Bucais" component={CuidadosBucais} />
