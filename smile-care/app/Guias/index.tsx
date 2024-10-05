@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const DiagnosticoBucal = () => {
+const GuiasPraticos = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Diagnóstico Bucal</Text>
+      <Text style={styles.title}>Guias Práticos</Text>
       <Text style={styles.subtitle}>FUNCIONA</Text>
     </View>
   );
@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DiagnosticoBucal;
+export default GuiasPraticos;

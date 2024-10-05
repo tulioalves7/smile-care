@@ -1,13 +1,23 @@
-import * as SplashScreen from 'expo-splash-screen';
-import 'react-native-reanimated';
-import * as React from 'react';
+import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import * as React from 'react';
 import HomeScreen from './index';
 import DiagnosticoBucal from './Diagnostico/index';
-SplashScreen.preventAutoHideAsync();
+import * as SplashScreen from 'expo-splash-screen';
+import CuidadosBucais from './Cuidados';
+import GuiasPraticos from './Guias';
+import VideosInterativos from './Videos';
 
-const Stack = createNativeStackNavigator();
+// Defina os tipos de rotas e parâmetros (não há parâmetros nesse caso)
+export type RootStackParamList = {
+  Home: undefined;
+  'Diagnóstico Bucal': undefined;
+  'Cuidados Bucais': undefined;
+  'Guias Práticos': undefined;
+  'Vídeos Interativos': undefined;
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function RootLayout() {
   React.useEffect(() => {
@@ -15,12 +25,14 @@ export default function RootLayout() {
   }, []);
 
   return (
-<NavigationContainer independent={true}>
-  <Stack.Navigator>
-    <Stack.Screen name="Home" component={HomeScreen} />
-    <Stack.Screen name="Diagnóstico Bucal" component={DiagnosticoBucal} />
-  </Stack.Navigator>
-</NavigationContainer>
-
+    <NavigationContainer independent={true}>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Diagnóstico Bucal" component={DiagnosticoBucal} />
+        <Stack.Screen name="Cuidados Bucais" component={CuidadosBucais} />
+        <Stack.Screen name="Guias Práticos" component={GuiasPraticos} />
+        <Stack.Screen name="Vídeos Interativos" component={VideosInterativos} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
