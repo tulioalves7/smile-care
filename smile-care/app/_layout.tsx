@@ -26,12 +26,22 @@ export default function RootLayout() {
 
   return (
     <NavigationContainer independent={true}>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Diagnóstico Bucal" component={DiagnosticoBucal} />
-        <Stack.Screen name="Cuidados Bucais" component={CuidadosBucais} />
-        <Stack.Screen name="Guias Práticos" component={GuiasPraticos} />
-        <Stack.Screen name="Vídeos Interativos" component={VideosInterativos} />
+      <Stack.Navigator initialRouteName="Diagnóstico Bucal">
+        <Stack.Screen name="Home" component={HomeScreen} options={{
+            headerShown: false, 
+          }} />
+        <Stack.Screen name="Diagnóstico Bucal" component={DiagnosticoBucal} options={{
+            headerShown: false, 
+          }} />
+        <Stack.Screen name="Cuidados Bucais" component={CuidadosBucais} options={{
+            headerShown: false, 
+          }} />
+        <Stack.Screen name="Guias Práticos" component={GuiasPraticos} options={{
+            headerShown: false, 
+          }} />
+        <Stack.Screen name="Vídeos Interativos" component={VideosInterativos} options={{
+            headerShown: false, 
+          }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

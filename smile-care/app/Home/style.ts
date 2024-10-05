@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
         alignItems: 'center', // Centralizar o conteúdo horizontalmente
     },
     logo: {
+        marginTop: 25,
         width: 150,
         height: 100,
         position: 'absolute', // Posiciona a logo de forma absoluta dentro do semi-círculo
