@@ -1,39 +1,32 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    largeSemiCircle: {
-        width: '140%',
-        height: '20%', 
-        backgroundColor: '#2F3737', 
-        borderBottomLeftRadius: 200,
-        borderBottomRightRadius: 200,
+    headerContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingHorizontal: 10,
+        paddingVertical: 10,
+        width: '100%',
         position: 'relative', 
+        marginTop: 20,
+        marginBottom: 20,
     },
-    smallSemiCircle: {
-        width: '90%',
-        height: '80%',  
-        backgroundColor: '#3FB3B5', 
-        borderBottomLeftRadius: 200,
-        borderBottomRightRadius: 200,
-        position: 'absolute',
-        left: '5%', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
+    button: {
+        padding: 10, // Área de toque para a seta
+    },
+    setaEsquerda: {
+        width: 30,
+        height: 30,
+        position: 'absolute', // Permite posicionamento fora do fluxo normal
+        left: 0, // Coloca a seta à esquerda
     },
     logo: {
         width: 155,
         height: 30,
-        position: 'absolute', 
-        top: 20, // Mantém no topo
-        right: 20, // Alinha à direita
+        position: 'absolute',
+        right: 0, // Ajuste a distância do lado direito
     },
-    setaEsquerda: {
-        width: 30, // Ajuste o tamanho da seta conforme necessário
-        height: 30,
-        position: 'absolute', 
-        top: 20, // Mantém no topo
-        left: 20, // Alinha à esquerda
-    }
 });
 
 export default styles;
