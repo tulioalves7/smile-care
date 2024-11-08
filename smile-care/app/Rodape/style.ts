@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         width: '110%',
         backgroundColor: '#68E1D4', // Cor de fundo conforme imagem enviada
-        paddingVertical: 10,
+        paddingVertical: 15,
         borderTopWidth: 1,
         borderColor: '#E0E0E0', // Cor do contorno do rodapé
     },
