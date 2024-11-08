@@ -9,10 +9,10 @@ const styles = StyleSheet.create({
         position: 'absolute',
         bottom: 0,
         width: '110%',
-        backgroundColor: '#68E1D4', // Cor de fundo conforme imagem enviada
-        paddingVertical: 15,
+        backgroundColor: '#68E1D4', 
+        paddingVertical: 25,
         borderTopWidth: 1,
-        borderColor: '#E0E0E0', // Cor do contorno do rodapé
+        borderColor: '#E0E0E0', 
     },
     button: {
         alignItems: 'center',

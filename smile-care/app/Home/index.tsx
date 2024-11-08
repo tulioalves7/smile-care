@@ -3,33 +3,41 @@ import { View, Text, TouchableOpacity, Image } from 'react-native';
 import styles from './style';
 import { RootStackParamList } from '../_layout';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import Reanimated, { FadeIn, FadeInUp, SlideInUp, SlideOutDown } from 'react-native-reanimated';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
 const HomeScreen: React.FC<Props> = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            {/* Logo e título */}
-            <Image
+            <Reanimated.Image
+                key={'index'}
+                entering={FadeInUp.duration(450)}
                 source={require('../../assets/images/logo.png')}
                 style={styles.logo}
             />
-            <Image
+            <Reanimated.Image
+                key={'index2'}
+                entering={FadeInUp.duration(700)}
                 source={require('../../assets/images/smile_escrita.png')}
                 style={styles.title}
             />
 
-            {/* Botões */}
-            <View style={styles.buttonContainer}>
+            {/* Botão */}
+
+            <Reanimated.View 
+                style={styles.buttonContainer}
+                entering={FadeIn.duration(1000)}
+            >
                 <TouchableOpacity
                     style={styles.button}
                     onPress={() => navigation.navigate('Diagnóstico Bucal')}
                 >
-                    <Image
-                        source={require('../../assets/images/diagnostico_bucal.png')}
-                        style={styles.icon}
-                    />
-                    <Text style={styles.buttonText}>Diagnóstico Bucal</Text>
+                <Image
+                    source={require('../../assets/images/diagnostico_bucal.png')}
+                    style={styles.icon}
+                />
+                <Text style={styles.buttonText}>Diagnóstico Bucal</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -64,7 +72,7 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
                     />
                     <Text style={styles.buttonText}>Guias práticos</Text>
                 </TouchableOpacity>
-            </View>
+            </Reanimated.View>
 
             {/* Ajuda */}
             <TouchableOpacity style={styles.needHelpContainer}>

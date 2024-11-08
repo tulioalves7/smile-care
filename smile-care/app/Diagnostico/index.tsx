@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Button, TouchableOpacity, Alert } from 'react-n
 import CustomHeader from '../Cabecalho/CustomHeader';
 import styles from './style';
 import FooterMenu from '../Rodape/CustomRodape';
+import Reanimated, { FadeIn, FadeInLeft, FadeInRight, FadeInUp, SlideInUp, SlideOutDown } from 'react-native-reanimated';
 
 const DiagnosticoBucal = () => {
   const questions = [
@@ -42,7 +43,7 @@ const DiagnosticoBucal = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState<number | null>(null);
   const [score, setScore] = useState(0);
-  const [showResult, setShowResult] = useState(false); // Novo estado para controlar a exibição do resultado
+  const [showResult, setShowResult] = useState(false); 
 
   const handleNextQuestion = () => {
     if (selectedOptionIndex !== null) {
@@ -53,7 +54,6 @@ const DiagnosticoBucal = () => {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
         setSelectedOptionIndex(null);
       } else {
-        // Exibe o resultado final e oculta o formulário
         setShowResult(true);
       }
     }
@@ -76,26 +76,48 @@ const DiagnosticoBucal = () => {
       <CustomHeader />
       
       {showResult ? (
-        // Exibe o resultado final
         <Text style={styles.resultText}>{getResultMessage()}</Text>
       ) : (
-        // Exibe o formulário de perguntas
         <>
-          <Text style={styles.questionText}>{currentQuestion.question}</Text>
+          <Reanimated.Text 
+              style={styles.questionText}
+              entering={FadeInLeft.duration(450).delay(150)}
+              exiting={FadeInRight.duration(250)}
+              key={`question-${currentQuestionIndex}-${score}`} 
+              
+            >
+            {currentQuestion.question}
+          </Reanimated.Text>
           {currentQuestion.options.map((option, index) => (
-            <TouchableOpacity
-              key={index}
+            <Reanimated.View
+              entering={FadeInLeft.duration(450).delay(150)}
+              exiting={FadeInRight.duration(250)}
+              key={`option-${currentQuestionIndex}-${index}`}
               style={[
                 styles.optionButton,
                 selectedOptionIndex === index && styles.selectedOptionButton,
+              ]}
+              
+            >
+            <TouchableOpacity
+              key={index}
+              style={[
+                // styles.optionButton,
+                // selectedOptionIndex === index && styles.selectedOptionButton,
               ]}
               onPress={() => setSelectedOptionIndex(index)}
             >
               <Text style={styles.optionText}>{option}</Text>
             </TouchableOpacity>
+            </Reanimated.View>
           ))}
 
-          <Button title="Responder" onPress={handleNextQuestion} disabled={selectedOptionIndex === null} />
+          <TouchableOpacity
+                    style={styles.sendButton}
+                    onPress={handleNextQuestion} disabled={selectedOptionIndex === null}    
+          >
+            <Text style={styles.buttonText}>Próxima Pergunta</Text>
+          </TouchableOpacity>
         </>
       )}
       

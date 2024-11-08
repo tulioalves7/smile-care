@@ -34,19 +34,48 @@ questionText: {
     textAlign: 'center',
   },
   optionButton: {
-    width: '100%',
-    padding: 15,
-    backgroundColor: '#f0f0f0',
-    borderRadius: 5,
-    marginVertical: 5,
+    flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: '#68E1D426',
+    paddingVertical: 15,
+    paddingHorizontal: 20,
+    borderRadius: 25,
+    marginVertical: 20,
+    alignContent: 'center',
+    justifyContent: 'center',
+    width: '80%',
+    fontWeight: 'bold',
   },
   selectedOptionButton: {
-    backgroundColor: '#4CAF50', // Cor diferente para a opção selecionada
+    backgroundColor: '#76ebe2', 
   },
   optionText: {
     fontSize: 18,
   },
+  resultText: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#4CAF50',
+    textAlign: 'center',
+    padding: 20,
+  },
+  sendButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#76ebe2',
+    paddingVertical: 15,
+    paddingHorizontal: 20,
+    borderRadius: 25,
+    marginVertical: 20,
+    alignContent: 'center',
+    justifyContent: 'center',
+    width: '80%',
+    fontWeight: 'bold',
+  },
+  buttonText: {
+    color: '#000',
+    fontWeight: 'bold',
+  }
 
 });
 
