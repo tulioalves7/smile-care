@@ -8,11 +8,11 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         position: 'absolute',
         bottom: 0,
-        width: '110%',
+        width: '112%',
         backgroundColor: '#68E1D4', 
         paddingVertical: 25,
         borderTopWidth: 1,
-        borderColor: '#E0E0E0', 
+        borderColor: '#E0E0E0',
     },
     button: {
         alignItems: 'center',

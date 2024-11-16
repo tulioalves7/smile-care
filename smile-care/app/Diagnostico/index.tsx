@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Button, TouchableOpacity, Alert } from 'react-native';
+import { View, Text, StyleSheet, Button, TouchableOpacity, Alert, ScrollView } from 'react-native';
 import CustomHeader from '../Cabecalho/CustomHeader';
 import styles from './style';
 import FooterMenu from '../Rodape/CustomRodape';
@@ -73,53 +73,55 @@ const DiagnosticoBucal = () => {
 
   return (
     <View style={styles.container}>
-      <CustomHeader />
-      
-      {showResult ? (
-        <Text style={styles.resultText}>{getResultMessage()}</Text>
-      ) : (
-        <>
-          <Reanimated.Text 
-              style={styles.questionText}
-              entering={FadeInLeft.duration(450).delay(150)}
-              exiting={FadeInRight.duration(250)}
-              key={`question-${currentQuestionIndex}-${score}`} 
-              
-            >
-            {currentQuestion.question}
-          </Reanimated.Text>
-          {currentQuestion.options.map((option, index) => (
-            <Reanimated.View
-              entering={FadeInLeft.duration(450).delay(150)}
-              exiting={FadeInRight.duration(250)}
-              key={`option-${currentQuestionIndex}-${index}`}
-              style={[
-                styles.optionButton,
-                selectedOptionIndex === index && styles.selectedOptionButton,
-              ]}
-              
-            >
-            <TouchableOpacity
-              key={index}
-              style={[
-                // styles.optionButton,
-                // selectedOptionIndex === index && styles.selectedOptionButton,
-              ]}
-              onPress={() => setSelectedOptionIndex(index)}
-            >
-              <Text style={styles.optionText}>{option}</Text>
-            </TouchableOpacity>
-            </Reanimated.View>
-          ))}
+      <ScrollView contentContainerStyle={styles.scrollContent}>
+        <CustomHeader />
+        
+        {showResult ? (
+          <Text style={styles.resultText}>{getResultMessage()}</Text>
+        ) : (
+          <>
+            <Reanimated.Text 
+                style={styles.questionText}
+                entering={FadeInLeft.duration(450).delay(150)}
+                exiting={FadeInRight.duration(250)}
+                key={`question-${currentQuestionIndex}-${score}`} 
+                
+              >
+              {currentQuestion.question}
+            </Reanimated.Text>
+            {currentQuestion.options.map((option, index) => (
+              <Reanimated.View
+                entering={FadeInLeft.duration(450).delay(150)}
+                exiting={FadeInRight.duration(250)}
+                key={`option-${currentQuestionIndex}-${index}`}
+                style={[
+                  styles.optionButton,
+                  selectedOptionIndex === index && styles.selectedOptionButton,
+                ]}
+                
+              >
+              <TouchableOpacity
+                key={index}
+                style={[
+                  // styles.optionButton,
+                  // selectedOptionIndex === index && styles.selectedOptionButton,
+                ]}
+                onPress={() => setSelectedOptionIndex(index)}
+              >
+                <Text style={styles.optionText}>{option}</Text>
+              </TouchableOpacity>
+              </Reanimated.View>
+            ))}
 
-          <TouchableOpacity
-                    style={styles.sendButton}
-                    onPress={handleNextQuestion} disabled={selectedOptionIndex === null}    
-          >
-            <Text style={styles.buttonText}>Próxima Pergunta</Text>
-          </TouchableOpacity>
-        </>
-      )}
+            <TouchableOpacity
+                      style={styles.sendButton}
+                      onPress={handleNextQuestion} disabled={selectedOptionIndex === null}    
+            >
+              <Text style={styles.buttonText}>Próxima Pergunta</Text>
+            </TouchableOpacity>
+          </>
+        )}
+      </ScrollView>
       
       <FooterMenu />
     </View>

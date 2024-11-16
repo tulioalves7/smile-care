@@ -4,8 +4,12 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         marginTop: 15,
-        alignItems: 'center',
         padding: 20,
+    },
+    scrollContent: {
+        justifyContent: 'center', // Alinha o conteúdo do ScrollView verticalmente ao centro
+        alignItems: 'center', // Alinha o conteúdo do ScrollView horizontalmente ao centro
+        paddingBottom: 100, // Para garantir que o conteúdo não sobreponha o rodapé
     },
     title: {
         fontSize: 30, // Ajuste o tamanho da fonte
@@ -19,6 +23,7 @@ const styles = StyleSheet.create({
     subtitle: {
         fontSize: 20,
         marginTop: 10,
+        textAlign: 'center', // Alinhamento do texto
     },
     });
 
