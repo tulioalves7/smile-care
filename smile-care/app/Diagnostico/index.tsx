@@ -89,6 +89,7 @@ const DiagnosticoBucal = () => {
               >
               {currentQuestion.question}
             </Reanimated.Text>
+            
             {currentQuestion.options.map((option, index) => (
               <Reanimated.View
                 entering={FadeInLeft.duration(450).delay(150)}
@@ -97,21 +98,22 @@ const DiagnosticoBucal = () => {
                 style={[
                   styles.optionButton,
                   selectedOptionIndex === index && styles.selectedOptionButton,
+                  
                 ]}
                 
               >
               <TouchableOpacity
                 key={index}
-                style={[
-                  // styles.optionButton,
-                  // selectedOptionIndex === index && styles.selectedOptionButton,
-                ]}
+                style={styles.touchWidth}
                 onPress={() => setSelectedOptionIndex(index)}
               >
                 <Text style={styles.optionText}>{option}</Text>
               </TouchableOpacity>
               </Reanimated.View>
             ))}
+
+
+
 
             <TouchableOpacity
                       style={styles.sendButton}

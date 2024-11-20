@@ -42,9 +42,8 @@ questionText: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#68E1D426',
-    paddingVertical: 15,
-    paddingHorizontal: 20,
-    borderRadius: 25,
+    paddingVertical: 20,
+    borderRadius: 24,
     marginVertical: 20,
     alignContent: 'center',
     justifyContent: 'center',
@@ -70,7 +69,7 @@ questionText: {
     backgroundColor: '#76ebe2',
     paddingVertical: 15,
     paddingHorizontal: 20,
-    borderRadius: 25,
+    borderRadius: 24,
     marginVertical: 20,
     alignContent: 'center',
     justifyContent: 'center',
@@ -80,6 +79,12 @@ questionText: {
   buttonText: {
     color: '#000',
     fontWeight: 'bold',
+  },
+  touchWidth: {
+    width: '100%',
+    textAlign: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
   }
 
 });
