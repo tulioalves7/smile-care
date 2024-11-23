@@ -20,16 +20,20 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   subtitle: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: 'bold',
     color: '#333333',
-    marginBottom: 70,
+    marginBottom: 30,
     textAlign: 'center',
     lineHeight: 24,
+    width: '60%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    
   },
   // Parágrafos e texto
   paragraph: {
-    fontSize: 16,
+    fontSize: 20,
     color: '#333333',
     lineHeight: 24,
     textAlign: 'justify',
@@ -60,7 +64,10 @@ const styles = StyleSheet.create({
   },
   // Listas
   listContainer: {
-    marginTop: 8,
+    marginTop: 1,
+    color: '#333333',
+    fontSize: 16,
+    
   },
   listItem: {
     fontSize: 16,
@@ -80,30 +87,25 @@ const styles = StyleSheet.create({
     backgroundColor: '#88E4DB',
     paddingVertical: 12,
     paddingHorizontal: 20,
-    borderRadius: 20,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 2,
-    elevation: 3,
+    borderRadius: 40,
   },
   buttonText: {
     color: '#FFFFFF',
-    fontSize: 16,
+    fontSize: 18,
     textAlign: 'center',
     fontWeight: 'bold',
   },
   tipButton: {
-    backgroundColor: '#68E1D4',
+    backgroundColor: '#b3f0e9',
     padding: 12,
-    borderRadius: 8,
+    borderRadius: 30,
     marginBottom: 16,
     alignSelf: 'center',
   },
   tipButtonText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: 'white',
+    color: '#0B0A32',
     textAlign: 'center',
   },
   // Texto genérico

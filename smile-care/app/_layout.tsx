@@ -11,6 +11,7 @@ import CuidadosBucais from './Cuidados';
 import GuiasPraticos from './Guias';
 import VideosInterativos from './Videos';
 import TelaAjuda from './Ajuda';
+import Creditos from './Creditos';
 
 // Defina os tipos de rotas e parâmetros (não há parâmetros nesse caso)
 export type RootStackParamList = {
@@ -20,6 +21,7 @@ export type RootStackParamList = {
     'Guias Práticos': undefined;
     'Vídeos Interativos': undefined;
     'Tela Ajuda': undefined;
+    Creditos: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -70,6 +72,13 @@ export default function RootLayout() {
                 <Stack.Screen
                     name="Tela Ajuda"
                     component={TelaAjuda}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
+                    name="Creditos"
+                    component={Creditos}
                     options={{
                         headerShown: false,
                     }}

@@ -13,9 +13,9 @@ export default StyleSheet.create({
         marginTop: -100,
     },
     title: {
-        width: 250,
+        width: 260,
         height: 60,
-        marginTop: 20,
+        marginTop: 5,
     },
     buttonContainer: {
         width: '80%',
@@ -58,4 +58,12 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         textDecorationLine: 'underline', // Adiciona sublinhado para parecer um link
     },
+    credits: {
+        fontSize: 14,
+        color: '#000000',
+        marginTop: 2,
+    }, 
+    creditsunder: {
+        textDecorationLine: 'underline',
+    }
 });

@@ -20,10 +20,7 @@ const CustomHeader: React.FC = () => {
             </TouchableOpacity>
 
             {/* Logo no canto direito */}
-            <Image
-                source={require('../../assets/images/smile_escrita.png')}
-                style={styles.logo}
-            />
+          
         </View>
     );
 };

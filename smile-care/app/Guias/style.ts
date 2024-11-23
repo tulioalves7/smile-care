@@ -3,8 +3,8 @@ import { StyleSheet, ScrollView } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: 15,
-        padding: 20,
+        backgroundColor: '#FFFFFF',
+        paddingHorizontal: 16,
     },
     scrollContent: {
         justifyContent: 'center', // Alinha o conteúdo do ScrollView verticalmente ao centro

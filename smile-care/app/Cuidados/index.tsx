@@ -18,7 +18,7 @@ const CuidadosBucais = () => {
       <Text style={styles.title}>Cuidados Bucais</Text>
       
       {/* Subtítulo */}
-      <Text style={styles.subtitle}>O que é ter uma saúde bucal?</Text>
+      {/* <Text style={styles.subtitle}>O que é ter uma saúde bucal?</Text> */}
       
     </View>
        
@@ -108,12 +108,13 @@ const CuidadosBucais = () => {
       
         <Text style={styles.paragraph}>
         Uma maneira simples de garantir essa proteção é escolher produtos com flúor para sua rotina de higiene bucal. Veja como incluir ele no seu dia a dia:
-        <View style={styles.listContainer}>
-        <Text style={styles.listItem}>• Opte por cremes dentais com flúor para uso diário;</Text>
-        <Text style={styles.listItem}>• Utilize enxaguantes bucais com flúor;</Text>
-        <Text style={styles.listItem}>• Fale com o seu dentista sobre aplicações de flúor periódicas.</Text>
-      </View>
+        
       </Text>
+      <View style={styles.listContainer}>
+          <Text style={styles.listItem}>• Opte por cremes dentais com flúor para uso diário;</Text>
+          <Text style={styles.listItem}>• Utilize enxaguantes bucais com flúor;</Text>
+          <Text style={styles.listItem}>• Fale com o seu dentista sobre aplicações de flúor periódicas.</Text>
+        </View>
 
       <TouchableOpacity style={styles.tipButton}>
           <Text style={styles.tipButtonText}>5. Visite o dentista regularmente </Text>

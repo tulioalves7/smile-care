@@ -4,10 +4,9 @@ const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        marginTop: 15,
-        padding: 20,
+        flex: 1, 
         backgroundColor: '#fff',
+        paddingHorizontal: 16,
     },
     scrollContent: {
         justifyContent: 'flex-start',
@@ -36,8 +35,8 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     paragraph: {
-        fontSize: 16,
-        color: '#555',
+        fontSize: 20,
+        color: '#000000',
         marginTop: 10,
         lineHeight: 24,
         textAlign: 'justify',
@@ -56,39 +55,6 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: '#000',
         fontWeight: 'bold',
-    },
-    modal: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%',
-        height: '100%',
-    },
-    modalContent: {
-        backgroundColor: 'white',
-        padding: 20,
-        borderRadius: 10,
-        width: '100%' ,
-        alignItems: 'center',
-        marginLeft: -40
-    },
-    closeButton: {
-        marginTop: 20,
-        backgroundColor: '#68E1D4',
-        padding: 10,
-        borderRadius: 5,
-        width: '100%',
-        alignItems: 'center',
-    },
-    closeButtonText: {
-        color: '#000',
-        fontWeight: 'bold',
-    },
-    divider: {
-        backgroundColor: '#000',
-        marginVertical: 15,
-        flex: 1,
-        padding: 1,
-        width: '90%'
     },
 });
 

@@ -13,13 +13,14 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     button: {
-        padding: 10, // Área de toque para a seta
+        padding: 25, // Área de toque para a seta
     },
     setaEsquerda: {
         width: 30,
         height: 30,
         position: 'absolute', // Permite posicionamento fora do fluxo normal
         left: 0, // Coloca a seta à esquerda
+        marginTop: 12
     },
     logo: {
         width: 155,

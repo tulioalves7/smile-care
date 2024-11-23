@@ -13,7 +13,7 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
             <Reanimated.Image
                 key={'index'}
                 entering={FadeInUp.duration(450)}
-                source={require('../../assets/images/logo.png')}
+                source={require('../../assets/images/logosmile.png')}
                 style={styles.logo}
             />
             <Reanimated.Image
@@ -22,6 +22,12 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
                 source={require('../../assets/images/smile_escrita.png')}
                 style={styles.title}
             />
+
+                <TouchableOpacity onPress={() => navigation.navigate('Creditos')}>
+                    <View>
+                        <Text style={styles.credits}>Gostou? Confira os <Text style={styles.creditsunder}>créditos</Text> </Text>
+                    </View>
+                </TouchableOpacity>   
 
             {/* Botão */}
 
@@ -75,14 +81,12 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
             </Reanimated.View>
 
             {/* Ajuda */}
-            <TouchableOpacity style={styles.needHelpContainer}>
+            <TouchableOpacity onPress={() => navigation.navigate('Tela Ajuda')} style={styles.needHelpContainer}>
+                
                 <Text style={styles.needHelpText}>Precisando de ajuda?</Text>
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Tela Ajuda')}
-                >
+
                     <Text style={styles.buttonTextHelp}>Clique aqui</Text>
                 </TouchableOpacity>
-            </TouchableOpacity>
         </View>
     );
 };
