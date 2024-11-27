@@ -12,13 +12,13 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
         <View style={styles.container}>
             <Reanimated.Image
                 key={'index'}
-                entering={FadeInUp.duration(450)}
+                entering={FadeInUp.duration(500)}
                 source={require('../../assets/images/logosmile.png')}
                 style={styles.logo}
             />
             <Reanimated.Image
                 key={'index2'}
-                entering={FadeInUp.duration(700)}
+                entering={FadeInUp.duration(500)}
                 source={require('../../assets/images/smile_escrita.png')}
                 style={styles.title}
             />

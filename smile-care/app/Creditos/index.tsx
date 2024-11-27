@@ -39,7 +39,7 @@ const Creditos = () => {
         style={styles.image}
       ></Image>
        <Image
-        source={require('../../assets/images/unisagrado.png')}
+        source={require('../../assets/images/LogoExtensao.png')}
         style={styles.image}
       ></Image>
       </View>
