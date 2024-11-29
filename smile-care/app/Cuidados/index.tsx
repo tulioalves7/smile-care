@@ -19,9 +19,9 @@ const CuidadosBucais = () => {
       </Reanimated.Text>
       
     </View>
-       <Text>
+       <Reanimated.Text>
         <Reanimated.Text
-        key={'index'}
+         key={'index'}
          style={styles.paragraph}
          entering={FadeInUp.duration(1000)}
          >
@@ -31,14 +31,14 @@ const CuidadosBucais = () => {
         <Reanimated.Text 
         style={styles.paragraph}
         key={'index2'}
-          entering={FadeInUp.duration(500)}
+          entering={FadeInUp.duration(1000)}
           >
           Saúde bucal significa que não há doenças na sua boca. Isso quer dizer que, além de não ter cáries, você também precisa estar livre de outros problemas como gengivite, periodontite, aftas, e até condições mais graves como o câncer de boca.
         </Reanimated.Text>
         <Reanimated.Text
          style={styles.paragraph} 
          key={'index3'}
-         entering={FadeInUp.duration(500)}
+         entering={FadeInUp.duration(1000)}
          >
          
           <Text style={styles.link}>Curiosidades:</Text> Cuidar bem da sua boca pode ajudar a prevenir doenças em outras partes do corpo, você sabia disso?
@@ -51,9 +51,13 @@ const CuidadosBucais = () => {
         entering={FadeInUp.duration(500)}
         >
           <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>
+            <Reanimated.Text 
+            key={'index0'}
+            style={styles.buttonText}
+            entering={FadeInUp.duration(500)}
+            >
               5 Dicas preventivas para manter a saúde dos dentes em dia
-            </Text>
+            </Reanimated.Text>
           </TouchableOpacity>
         </Reanimated.View>
 
@@ -61,34 +65,41 @@ const CuidadosBucais = () => {
         <Reanimated.Text
          style={styles.paragraph}
          key={'index5'}
-         entering={FadeInUp.duration(500)}
+         entering={FadeInUp.duration(1000)}
          >
           Para manter a saúde dos dentes em dia e evitar doenças bucais, é importante entender como funciona a nossa boca. Além da gengiva, língua e dentes, a boca é o lar de muitos micro-organismos, incluindo bactérias. Algumas dessas bactérias são boas e ajudam na digestão e na proteção contra infecções.
         </Reanimated.Text>
+
         <Reanimated.Text 
         style={styles.paragraph}
         key={'index6'}
-        entering={FadeInUp.duration(500)}
+        entering={FadeInUp.duration(1000)}
         >
           No entanto, também há bactérias que podem causar problemas se não forem controladas. Essas bactérias se alimentam dos restos de alimentos na boca e produzem ácidos, o que pode levar a cáries, doenças gengivais e mau hálito.
         </Reanimated.Text>
+
         <Reanimated.Text 
         style={styles.paragraph}
         key={'index7'}
-        entering={FadeInUp.duration(500)}
+        entering={FadeInUp.duration(1000)}
         >
           A melhor maneira de combater essas bactérias ruins é manter uma boa rotina de higiene bucal. Aqui estão <Text style={styles.highlightText}>5 dicas simples</Text> para ajudar você a cuidar dos seus dentes e manter a saúde bucal em dia:
         </Reanimated.Text>
 
-       
         <TouchableOpacity style={styles.tipButton}>
-          <Text style={styles.tipButtonText}>1. Tudo começa na escovação</Text>
+          <Reanimated.Text 
+          key={'index00'}
+          style={styles.tipButtonText}
+          entering={FadeInUp.duration(500)}
+          >1. Tudo começa na escovação
+          </Reanimated.Text>
+          
         </TouchableOpacity>
 
         <Reanimated.Text
          style={styles.paragraph}
          key={'index8'}
-         entering={FadeInUp.duration(500)}
+         entering={FadeInUp.duration(1000)}
          >
           A escovação regular dos dentes, especialmente após as refeições, é fundamental para remover a placa bacteriana, prevenir o mau hálito e manter a gengiva saudável.
         </Reanimated.Text>
@@ -96,7 +107,7 @@ const CuidadosBucais = () => {
         <Reanimated.Text 
         style={styles.paragraph}
         key={'index9'}
-        entering={FadeInUp.duration(500)}
+        entering={FadeInUp.duration(1000)}
         >
           Esse hábito simples não só contribui para a sua saúde dental, removendo manchas superficiais, mas também ajuda a deixar seu sorriso mais bonito e radiante!
         </Reanimated.Text>
@@ -106,7 +117,7 @@ const CuidadosBucais = () => {
           source={require('../Cuidados/images/smileCare.png')} 
           style={styles.image}
           key={'index10'}
-          entering={FadeInUp.duration(500)}
+          entering={FadeInUp.duration(1000)}
           resizeMode="contain"
         />
 
@@ -114,7 +125,7 @@ const CuidadosBucais = () => {
           <Reanimated.Text 
           style={styles.tipButtonText}
           key={'index11'}
-          entering={FadeInUp.duration(500)}
+          entering={FadeInUp.duration(1000)}
           >2. Faça do fio dental um aliado
              </Reanimated.Text>
         </TouchableOpacity>
@@ -122,7 +133,7 @@ const CuidadosBucais = () => {
         <Reanimated.Text 
         style={styles.paragraph}
         key={'index12'}
-        entering={FadeInUp.duration(500)}
+        entering={FadeInUp.duration(1000)}
         >
         Usar o fio dental regularmente é outro cuidado básico para tirar a placa bacteriana e os restos de alimentos nas áreas que a escova de dente não consegue alcançar. 
 
@@ -131,6 +142,8 @@ const CuidadosBucais = () => {
         <Reanimated.Text 
         style={styles.paragraph}
         key={'index13'}
+        entering={FadeInUp.duration(1000)}
+
         >
         Basta segurar o fio dental entre os dedos e deslizar com movimentos suaves de vaivém entre os dentes.
         </Reanimated.Text>
@@ -200,7 +213,7 @@ const CuidadosBucais = () => {
         Se você ainda não marcou a sua consulta, a hora é agora!
       </Text>
     </Reanimated.View>
-    </Text>
+    </Reanimated.Text>
 
       </ScrollView>
 

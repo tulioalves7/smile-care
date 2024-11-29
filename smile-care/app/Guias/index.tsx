@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import styles from './style';
 import CustomHeader from '../Cabecalho/CustomHeader';
 import FooterMenu from '../Rodape/CustomRodape';
+import Reanimated, { FadeIn, FadeInUp, SlideInUp, SlideOutDown } from 'react-native-reanimated';
 
 const GuiasPraticos = () => {
 
@@ -40,48 +41,126 @@ const GuiasPraticos = () => {
     ];
 
     return (
-        <View style={styles.container}>
+        <Reanimated.View 
+        key={'index0'}
+        style={styles.container}
+        entering={FadeInUp.duration(500)}
+        >
             <ScrollView contentContainerStyle={styles.scrollContent}>
                 <CustomHeader />
-                <Text style={styles.title}>Guias Práticos</Text>
-                <Text style={styles.paragraph}>{'\n'}Bem-vindo à nossa seção de Guias Práticos para Saúde Bucal,
+                <Reanimated.Text 
+                key={'index'}
+                style={styles.title}
+                entering={FadeInUp.duration(500)}
+                >
+                Guias Práticos
+                </Reanimated.Text>
+
+                <Reanimated.Text 
+                key={'index2'}
+                style={styles.paragraph}
+                entering={FadeInUp.duration(500)}
+                >{'\n'}Bem-vindo à nossa seção de Guias Práticos para Saúde Bucal,
                     um espaço dedicado a fornecer orientações simples e eficazes para cuidar do seu sorriso.
                     {'\n'}{'\n'}Aqui, você encontrará instruções detalhadas para manter uma
                     boa higiene bucal, previnir doenças e melhorar a saúde dos seus dentes e gengivas.{'\n'}
-                </Text>
+                </Reanimated.Text>
 
-                <Text style={styles.topico}>4 Passos para um sorriso brilhante</Text>
-                <Text style={styles.subtitle}>Passo 1:</Text>
-                <Text style={styles.paragraph}>Escove os dentes pelo menos três vezes ao dia, especialmente
+                <Reanimated.Text
+                key={'index3'}
+                style={styles.topico}
+                entering={FadeInUp.duration(500)}
+                >4 Passos para um sorriso brilhante
+                </Reanimated.Text>
+
+                <Reanimated.Text 
+                key={'index4'}
+                style={styles.subtitle}
+                entering={FadeInUp.duration(500)}
+                >Passo 1:
+                </Reanimated.Text>
+
+                <Reanimated.Text 
+                key={'index5'}
+                style={styles.paragraph}
+                entering={FadeInUp.duration(500)}
+                >Escove os dentes pelo menos três vezes ao dia, especialmente
                     depois das refeições, usando um creme dental com flúor. Isso ajuda a remover resíduos de comida
                     e proteger seus dentes contra cáries.
-                </Text>
-                <Text style={styles.subtitle}>{'\n'}Passo 2:</Text>
-                <Text style={styles.paragraph}>Use fio dental todos os dias. O fio dental alcança lugares
-                    onde a escova não chega, ajudando a limpar entre os dentes e prevenindo problemas nas gengivas.
-                </Text>
-                <Text style={styles.subtitle}>{'\n'}Passo 3:</Text>
-                <Text style={styles.paragraph}>Modere nos lanches entre as refeições. Comer com muita frequência
-                    aumenta o risco de acúmulo de açúcar nos dentes, o que pode causar cáries.
-                </Text>
-                <Text style={styles.subtitle}>{'\n'}Passo 4:</Text>
-                <Text style={styles.paragraph}>Visite seu dentista regularmente para check-ups e limpezas.
-                    Consultas frequentes garantem que sua saúde bucal esteja sempre em dia.{'\n'}{'\n'}
-                </Text>
+                </Reanimated.Text>
 
-                <Text style={styles.topico}>Como escovar seus dentes</Text>
+                <Reanimated.Text 
+                key={'index6'}
+                style={styles.subtitle}
+                entering={FadeInUp.duration(500)}
+                >{'\n'}Passo 2:
+                </Reanimated.Text>
+
+                <Reanimated.Text 
+                key={'index7'}
+                style={styles.paragraph}
+                entering={FadeInUp.duration(500)}
+                >Use fio dental todos os dias. O fio dental alcança lugares
+                    onde a escova não chega, ajudando a limpar entre os dentes e prevenindo problemas nas gengivas.
+                </Reanimated.Text>
+
+                <Reanimated.Text 
+                key={'index8'}
+                style={styles.subtitle}
+                entering={FadeInUp.duration(500)}
+                >{'\n'}Passo 3:
+                </Reanimated.Text>
+
+                <Reanimated.Text 
+                key={'inedx9'}
+                style={styles.paragraph}
+                entering={FadeInUp.duration(500)}
+                >Modere nos lanches entre as refeições. Comer com muita frequência
+                    aumenta o risco de acúmulo de açúcar nos dentes, o que pode causar cáries.
+                </Reanimated.Text>
+
+                <Reanimated.Text 
+                key={'index10'}
+                style={styles.subtitle}
+                entering={FadeInUp.duration(500)}
+                >{'\n'}Passo 4:
+                </Reanimated.Text>
+
+                <Reanimated.Text 
+                key={'index11'}
+                style={styles.paragraph}
+                entering={FadeInUp.duration(500)}
+                >Visite seu dentista regularmente para check-ups e limpezas.
+                    Consultas frequentes garantem que sua saúde bucal esteja sempre em dia.{'\n'}{'\n'}
+                </Reanimated.Text>
+
+                <Reanimated.Text 
+                key={'index12'}
+                style={styles.topico}
+                entering={FadeInUp.duration(500)}
+                >Como escovar seus dentes
+                </Reanimated.Text>
 
                 {/* Renderizando os tópicos com imagem e texto */}
                 {topics.map((topic) => (
-                    <View key={topic.id} style={styles.topicoContainer}>
-                        <Image source={topic.image} style={styles.image} />
-                        <Text style={styles.topicoText}>{topic.title}</Text>
-                    </View>
+                    <Reanimated.View key={topic.id} style={styles.topicoContainer}>
+                        <Reanimated.Image source={topic.image} 
+                        key={'indeximage'}
+                        entering={FadeInUp.duration(500)}
+                        style={styles.image} />
+
+                        <Reanimated.Text 
+                        key={'index13'}
+                        style={styles.topicoText}
+                        entering={FadeInUp.duration(500)}
+                        >{topic.title}
+                        </Reanimated.Text>
+                    </Reanimated.View>
                 ))}
 
             </ScrollView>
             <FooterMenu />
-        </View>
+        </Reanimated.View>
          
     );
 };
