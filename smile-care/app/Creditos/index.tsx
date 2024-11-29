@@ -40,7 +40,7 @@ const Creditos = () => {
       ></Image>
        <Image
         source={require('../../assets/images/LogoExtensao.png')}
-        style={styles.image}
+        style={styles.imagecord}
       ></Image>
       </View>
 

@@ -80,7 +80,6 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
                 </TouchableOpacity>
             </Reanimated.View>
 
-            {/* Ajuda */}
             <TouchableOpacity onPress={() => navigation.navigate('Tela Ajuda')} style={styles.needHelpContainer}>
                 
                 <Text style={styles.needHelpText}>Precisando de ajuda?</Text>

@@ -46,11 +46,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   image: {
-    width: 180,
-    height: 55,
+    width: 160,
+    height: 45,
   },
   imagens: {
     flexDirection: 'row',
+  },
+  imagecord: {
+    width: 180,
+    height: 25,
+    marginTop: 10,
   }
 
 });
